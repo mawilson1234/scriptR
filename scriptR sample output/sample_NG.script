@@ -1,0 +1,430 @@
+%BeginHeader
+	fix_align start pts matrix:	start_pts = rbind(c(20,368), c(20,402), c(20,434))
+%EndHeader
+
+set conditions = 14
+set experiments = 2
+set expConditions =  6 8
+set background = 16777215
+set foreground = 0
+set filterMode = 2
+set windowThreshold = 0
+set calibration_type = 1
+set calibration_height = 775368240
+set display_type = LCD
+
+trial_type question
+	text_format =	'Monaco' 12 0 15 268 nonantialiased
+	text_weight =	normal non-italic
+	button =	leftTrigger
+	button =	rightTrigger
+	output =	nostream
+	trigger =	nogaze
+	cursor_size =	0
+	dc_delay =	0
+	stimulus_delay =	0
+	revert =	0
+	highlight_color =	591636
+end question
+
+trial_type sentence
+	text_format =	'Monaco' 12 0 15 268 nonantialiased
+	text_weight =	normal non-italic
+	button =	rightTrigger
+	output =	stream
+	trigger =	nogaze
+	cursor_size =	0
+	dc_delay =	0
+	stimulus_delay =	0
+	revert =	0
+	highlight_color =	591636
+end sentence
+
+trial_type Message
+	text_format =	'Monaco' 12 0 15 268 nonantialiased
+	text_weight =	normal non-italic
+	button =	Y
+	button =	X
+	button =	B
+	button =	A
+	button =	toggle
+	button =	leftTrigger
+	button =	rightTrigger
+	output =	nostream
+	trigger =	nogaze
+	cursor_size =	0
+	dc_delay =	0
+	stimulus_delay =	0
+	revert = 	0
+	highlight_color =	197148
+end Message
+
+trial P1I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|These are the pre-practice instructions.\n
+	max_display_time = 	300000
+	trial_type =	Message
+end P1I1D0
+
+trial P1I1D1
+	gc_rect =	(322 20 414 60)
+	inline =	|This is a practice item.\n
+	max_display_time =	60000
+	trial_type = sentence
+end P1I1D1
+
+trial P1I1D102
+	button =	leftTrigger
+	inline =	|Was this a practice item?\n\nY     N\n
+	max_display_time =	60000
+	trial_type =	question
+end P1I1D102
+
+trial P1I1D2
+	gc_rect =	(322 20 414 60)
+	inline =	|These are the post-practice instructions.\n
+	max_display_time = 	300000
+	trial_type =	Message
+end P1I1D2
+
+sequence SP1I1
+	P1I1D0
+	P1I1D1
+	P1I1D102
+	P1I1D2
+end SP1I1
+
+trial E1I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|A seemingly normal item\n
+	inline =	|A display change trial\n
+	max_display_time =	300000
+	region =	(357 40 380 240)
+	trial_type = 	sentence
+end E1I1D0
+
+trial E101I1D1
+	button =	leftTrigger
+	inline =	|Is this a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E101I1D1
+
+sequence SE1I1
+	E1I1D0
+	E101I1D1
+end SE1I1
+
+trial E2I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|A seemingly\nnormal item\n
+	inline =	|A display\nchange trial\n
+	max_display_time =	300000
+	region =	(357 40 380 110)(390 20 413 140)
+	trial_type = 	sentence
+end E2I1D0
+
+trial E102I1D2
+	button =	leftTrigger
+	inline =	|Is this a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E102I1D2
+
+sequence SE2I1
+	E2I1D0
+	E102I1D2
+end SE2I1
+
+trial E3I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|A seemingly\nnormal\nitem\n
+	inline =	|A display\nchange\ntrial\n
+	max_display_time =	300000
+	region =	(357 40 380 110)(390 20 413 80)(423 20 446 70)
+	trial_type = 	sentence
+end E3I1D0
+
+trial E103I1D3
+	button =	rightTrigger
+	inline =	|Is this a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E103I1D3
+
+sequence SE3I1
+	E3I1D0
+	E103I1D3
+end SE3I1
+
+trial E4I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|A seemingly normal item\n
+	inline =	|A display change trial\n
+	max_display_time =	300000
+	region =	(357 40 380 240)
+	trial_type = 	sentence
+end E4I1D0
+
+trial E104I1D4
+	button =	rightTrigger
+	inline =	|Is this a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E104I1D4
+
+sequence SE4I1
+	E4I1D0
+	E104I1D4
+end SE4I1
+
+trial E5I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|A seemingly\nnormal item\n
+	inline =	|A display\nchange trial\n
+	max_display_time =	300000
+	region =	(357 40 380 110)(390 20 413 140)
+	trial_type = 	sentence
+end E5I1D0
+
+trial E105I1D5
+	button =	rightTrigger
+	inline =	|Is this a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E105I1D5
+
+sequence SE5I1
+	E5I1D0
+	E105I1D5
+end SE5I1
+
+trial E6I1D0
+	gc_rect =	(322 20 414 60)
+	inline =	|A seemingly\nnormal\nitem\n
+	inline =	|A display\nchange\ntrial\n
+	max_display_time =	300000
+	region =	(357 40 380 110)(390 20 413 80)(423 20 446 70)
+	trial_type = 	sentence
+end E6I1D0
+
+trial E106I1D6
+	button =	leftTrigger
+	inline =	|Is this a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E106I1D6
+
+sequence SE6I1
+	E6I1D0
+	E106I1D6
+end SE6I1
+
+trial E7I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 1 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E7I2D0
+
+trial E107I2D7
+	button =	rightTrigger
+	inline =	|Does this item in this condition have a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E107I2D7
+
+sequence SE7I2
+	E7I2D0
+	E107I2D7
+end SE7I2
+
+trial E8I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 2 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E8I2D0
+
+trial E9I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 3 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E9I2D0
+
+trial E10I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 4 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E10I2D0
+
+trial E110I2D10
+	button =	leftTrigger
+	inline =	|Does this item in this condition have a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E110I2D10
+
+sequence SE10I2
+	E10I2D0
+	E110I2D10
+end SE10I2
+
+trial E11I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 1 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E11I2D0
+
+trial E111I2D11
+	button =	leftTrigger
+	inline =	|Does this item in this condition have a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E111I2D11
+
+sequence SE11I2
+	E11I2D0
+	E111I2D11
+end SE11I2
+
+trial E12I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 2 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E12I2D0
+
+trial E13I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 3 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E13I2D0
+
+trial E14I2D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 1 condition 4 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E14I2D0
+
+trial E114I2D14
+	button =	rightTrigger
+	inline =	|Does this item in this condition have a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E114I2D14
+
+sequence SE14I2
+	E14I2D0
+	E114I2D14
+end SE14I2
+
+trial E7I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 1 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E7I3D0
+
+trial E8I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 4 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E8I3D0
+
+trial E9I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 3 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E9I3D0
+
+trial E109I3D9
+	button =	leftTrigger
+	inline =	|Does this item in this condition have a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E109I3D9
+
+sequence SE9I3
+	E9I3D0
+	E109I3D9
+end SE9I3
+
+trial E10I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 2 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E10I3D0
+
+trial E110I3D10
+	button =	rightTrigger
+	inline =	|Does this item in this condition have a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E110I3D10
+
+sequence SE10I3
+	E10I3D0
+	E110I3D10
+end SE10I3
+
+trial E11I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 1 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E11I3D0
+
+trial E12I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 4 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E12I3D0
+
+trial E13I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 3 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E13I3D0
+
+trial E113I3D13
+	button =	rightTrigger
+	inline =	|Does this item in this condition have a question?\n\nn     y\n
+	max_display_time =	300000
+	trial_type =	question
+end E113I3D13
+
+sequence SE13I3
+	E13I3D0
+	E113I3D13
+end SE13I3
+
+trial E14I3D0
+	gc_rect =	(322 20 414 60)
+	inline =	|This is item 2 condition 2 from experiment 2.\n
+	max_display_time =	300000
+	trial_type =	sentence
+end E14I3D0
+
+trial E114I3D14
+	button =	leftTrigger
+	inline =	|Does this item in this condition have a question?\n\ny     n\n
+	max_display_time =	300000
+	trial_type =	question
+end E114I3D14
+
+sequence SE14I3
+	E14I3D0
+	E114I3D14
+end SE14I3
+

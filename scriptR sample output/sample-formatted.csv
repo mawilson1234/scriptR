@@ -1,0 +1,23 @@
+Experiment,item_condition,item_id,Timeout,QTimeout,Sentence,Sentence2,Question,LeftAnswer,RightAnswer,AnswerButton
+1,1,1,300000,300000,A seemingly normal item,A %display change trial%,Is this a question?,Y,N,leftTrigger
+1,2,1,300000,300000,A seemingly\nnormal item,A %display%\n%change trial%,Is this a question?,Y,N,leftTrigger
+1,3,1,300000,300000,A seemingly\nnormal\nitem,A %display%\n%change%\n%trial%,Is this a question?,Y,N,rightTrigger
+1,4,1,300000,300000,A seemingly normal item,A %display change trial%,Is this a question?,N,Y,rightTrigger
+1,5,1,300000,300000,A seemingly\nnormal item,A %display%\n%change trial%,Is this a question?,N,Y,rightTrigger
+1,6,1,300000,300000,A seemingly\nnormal\nitem,A %display%\n%change%\n%trial%,Is this a question?,N,Y,leftTrigger
+2,7,2,300000,300000,This is item 1 condition 1 from experiment 2.,,Does this item in this condition have a question?,N,Y,rightTrigger
+2,8,2,300000,300000,This is item 1 condition 2 from experiment 2.,,,,,leftTrigger
+2,9,2,300000,300000,This is item 1 condition 3 from experiment 2.,,,,,leftTrigger
+2,10,2,300000,300000,This is item 1 condition 4 from experiment 2.,,Does this item in this condition have a question?,Y,N,leftTrigger
+2,11,2,300000,300000,This is item 1 condition 1 from experiment 2.,,Does this item in this condition have a question?,Y,N,leftTrigger
+2,12,2,300000,300000,This is item 1 condition 2 from experiment 2.,,,,,rightTrigger
+2,13,2,300000,300000,This is item 1 condition 3 from experiment 2.,,,,,rightTrigger
+2,14,2,300000,300000,This is item 1 condition 4 from experiment 2.,,Does this item in this condition have a question?,N,Y,rightTrigger
+2,7,3,300000,300000,This is item 2 condition 1 from experiment 2.,,,,,leftTrigger
+2,8,3,300000,300000,This is item 2 condition 4 from experiment 2.,,,,,rightTrigger
+2,9,3,300000,300000,This is item 2 condition 3 from experiment 2.,,Does this item in this condition have a question?,Y,N,leftTrigger
+2,10,3,300000,300000,This is item 2 condition 2 from experiment 2.,,Does this item in this condition have a question?,N,Y,rightTrigger
+2,11,3,300000,300000,This is item 2 condition 1 from experiment 2.,,,,,rightTrigger
+2,12,3,300000,300000,This is item 2 condition 4 from experiment 2.,,,,,leftTrigger
+2,13,3,300000,300000,This is item 2 condition 3 from experiment 2.,,Does this item in this condition have a question?,N,Y,rightTrigger
+2,14,3,300000,300000,This is item 2 condition 2 from experiment 2.,,Does this item in this condition have a question?,Y,N,leftTrigger
