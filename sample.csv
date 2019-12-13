@@ -1,0 +1,15 @@
+Experiment,item_id,Timeout,QTimeout,Sentence,Sentence2,Question,LeftAnswer,RightAnswer,AnswerButton
+P,Message,300000,60000,These are the pre-practice instructions.,,,,,
+P,1,60000,60000,This is a practice item.,,Was this a practice item?,Y,N,leftTrigger
+P,Message,300000,60000,These are the post-practice instructions.,,,,,
+1,1,300000,300000,A seemingly normal item,A %display change trial%,Is this a question?,Y,N,leftTrigger
+1,1,300000,300000,A seemingly\nnormal item,A %display%\n%change trial%,Is this a question?,Y,N,leftTrigger
+1,1,300000,300000,A seemingly\nnormal\nitem,A %display%\n%change%\n%trial%,Is this a question?,Y,N,rightTrigger
+2,1,300000,300000,This is item 1 condition 1 from experiment 2.,,Does this item in this condition have a question?,N,Y,rightTrigger
+2,1,300000,300000,This is item 1 condition 2 from experiment 2.,,,,,
+2,1,300000,300000,This is item 1 condition 3 from experiment 2.,,,,,
+2,1,300000,300000,This is item 1 condition 4 from experiment 2.,,Does this item in this condition have a question?,Y,N,leftTrigger
+2,2,300000,300000,This is item 2 condition 1 from experiment 2.,,,,,
+2,2,300000,300000,This is item 2 condition 2 from experiment 2.,,Does this item in this condition have a question?,Y,N,leftTrigger
+2,2,300000,300000,This is item 2 condition 3 from experiment 2.,,Does this item in this condition have a question?,N,Y,rightTrigger
+2,2,300000,300000,This is item 2 condition 4 from experiment 2.,,,,,
